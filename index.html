@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoForNerds</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>ToDoForNerds <img src="To-Do-Img/images/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your task">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 1</li>
-                <li>Task 1</li> -->
-            </ul>
-        </div>
+<div class="all">
+    <form id="form">
+        <label for="box">Task: </label>
+        <input type="text" name="" id="box">
+        <button type="button" onclick=addTask() id="taskButton">New Task</button>
+    </form>
+    <ol id="orderedList">
+        
+    </ol>
     </div>
     <script src="app.js"></script>
 </body>
