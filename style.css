@@ -27,6 +27,10 @@ li:hover {
     color: red;
     font-size: 40px;
 }
+li button {
+    margin-left: 50px;
+}
+
 #box {
     border-radius: 20px;
     height: 5vh;
@@ -47,4 +51,11 @@ label {
 }
 #form {
     margin-top: 10px;
+}
+#deleteButton {
+    width: 30%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: #05ACF0;
+    color: #ffffff;
 }
