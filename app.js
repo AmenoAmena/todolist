@@ -37,5 +37,4 @@ function addTask() {
 function deleteTask(index) {
     tasks.splice(index, 1);
     renderTasks();
-    console.log("Task deleted at index: " + index);
 }
