@@ -9,7 +9,7 @@ function renderTasks() {
         
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
-        deleteButton.id='deleteButton';
+        deleteButton.id = 'deleteButton';
         deleteButton.addEventListener("click", function() {
             deleteTask(i);
         });
@@ -29,6 +29,7 @@ function addTask() {
         document.getElementById("box").value = "";
     } else {
         tasks.push(formValue);
+        setTasksLocal();
         renderTasks();
         document.getElementById("box").value = "";
     }
@@ -36,5 +37,19 @@ function addTask() {
 
 function deleteTask(index) {
     tasks.splice(index, 1);
+    setTasksLocal();
     renderTasks();
 }
+
+function getTasksLocal() {
+    let storedTasks = localStorage.getItem('tasks');
+    tasks = storedTasks ? JSON.parse(storedTasks) : [];
+}
+
+function setTasksLocal() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+
+getTasksLocal();    
+renderTasks();
